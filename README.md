@@ -6,6 +6,7 @@ Before starting to work with this template, please take some time to read throug
 
 ## Reference
 
+- [Application spesifics](#Application-specifics)
 - [Included tools](#included-tools)
 - [Requirements](#requirements)
 - [Getting started](#getting-started)
@@ -20,6 +21,38 @@ Before starting to work with this template, please take some time to read throug
   - [Continuous Integration](#continuous-integration)
   - [Continuous Deployment](#continuous-deployment)
   - [How to automatically deploy updates to npm](#how-to-automatically-deploy-updates-to-npm)
+
+## Application specifics
+
+This application has functions of:
+
+- Users
+
+  - User can sign up, sign in, sign out. ✔️
+  - User can change email, password and name. ✔️
+  - User can reset password if forgotten ✔️
+  - User must verify their account before signing in. ✔️
+
+- Functions
+
+  - User can add a product with a webflow form to Webflow CMS
+    - User can upload an image of the product.
+  - User can review a product added by other users.
+    - 5 categories with a 1-5 scale.
+    - Review values will be stored to Product.
+
+- Airtable (Database)
+
+  - When user signs up, data will be sent to Airtable (to table Users) ✔️
+  - When user is deleted, the deleted record will be deleted in Airtable (from table Users)
+
+  - When user reviews a product, data will be sent to Airtable (to table Reviews)
+  - When user review is deleted, the deleted record will be deleted in Airtable (from table Reviews)
+
+  - When users adds a product, data will be sent to Airtable (to table Products)
+  - When Product is deleted, the deleted record will be deleted in Airtable (from table Products)
+
+  - When product receives a review, it will be stored to Product details. The product will have a total score an averages for all categories.
 
 ## Included tools
 
